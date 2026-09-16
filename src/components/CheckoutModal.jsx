@@ -70,31 +70,31 @@ export default function CheckoutModal({ isOpen, onClose, configState }) {
     container.style.left = '-9999px'
     container.style.top = '0'
     container.innerHTML = `
-      <div style="background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;padding:40px 50px;width:595px;min-height:842px;">
-        <div style="text-align:center;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div style="font-size:36px;font-weight:700;letter-spacing:8px;color:#fff;">KRO<span style="color:#69a7ff;">NOS</span>.80</div>
-          <div style="color:#888;font-size:10px;letter-spacing:5px;text-transform:uppercase;margin-top:8px;">Manufacturing Ticket</div>
+      <div style="background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;padding:60px 80px;width:793px;height:1122px;box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden;">
+        <div style="text-align:center;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:46px;font-weight:700;letter-spacing:10px;color:#fff;">KRO<span style="color:#69a7ff;">NOS</span>.80</div>
+          <div style="color:#888;font-size:12px;letter-spacing:6px;text-transform:uppercase;margin-top:12px;">Manufacturing Ticket</div>
         </div>
 
-        <div style="text-align:center;padding:30px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
-          <div style="display:inline-block;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);color:#22c55e;padding:6px 18px;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;">✓ ORDER CONFIRMED</div>
-          <div style="font-size:32px;font-weight:700;letter-spacing:8px;color:#69a7ff;margin-top:16px;">${orderId}</div>
-          <div style="margin:16px auto 0;width:200px;height:36px;background:repeating-linear-gradient(90deg,#fff 0px,#fff 3px,transparent 3px,transparent 5px,#fff 5px,#fff 7px,transparent 7px,transparent 11px,#fff 11px,#fff 15px,transparent 15px,transparent 17px);opacity:0.25;"></div>
+        <div style="text-align:center;padding:40px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+          <div style="display:inline-block;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);color:#22c55e;padding:8px 24px;border-radius:99px;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;">✓ ORDER CONFIRMED</div>
+          <div style="font-size:40px;font-weight:700;letter-spacing:10px;color:#69a7ff;margin-top:24px;">${orderId}</div>
+          <div style="margin:24px auto 0;width:260px;height:44px;background:repeating-linear-gradient(90deg,#fff 0px,#fff 3px,transparent 3px,transparent 5px,#fff 5px,#fff 7px,transparent 7px,transparent 11px,#fff 11px,#fff 15px,transparent 15px,transparent 17px);opacity:0.25;"></div>
         </div>
 
-        <div style="padding:24px 0;">
-          <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Date</span><span style="color:#fff;font-weight:600;font-size:14px;">${now.toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' })}</span></div>
-          <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Customer</span><span style="color:#fff;font-weight:600;font-size:14px;">${formData.name}</span></div>
-          <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Ship To</span><span style="color:#fff;font-weight:600;font-size:14px;text-align:right;max-width:260px;">${formData.address}</span></div>
-          <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Build</span><span style="color:#fff;font-weight:600;font-size:14px;">${c.name} &middot; ${sName}</span></div>
-          <div style="display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Payment</span><span style="color:#fff;font-weight:600;font-size:14px;">Cash on Delivery</span></div>
-          <div style="display:flex;justify-content:space-between;padding:24px 0 16px;border-top:2px solid rgba(105,167,255,0.25);margin-top:10px;"><span style="color:#666;font-size:12px;text-transform:uppercase;letter-spacing:3px;">Total</span><span style="color:#69a7ff;font-weight:700;font-size:28px;">&#x20B9;${total.toLocaleString('en-IN')}</span></div>
+        <div style="padding:40px 0;flex-grow:1;">
+          <div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Date</span><span style="color:#fff;font-weight:600;font-size:17px;">${now.toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' })}</span></div>
+          <div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Customer</span><span style="color:#fff;font-weight:600;font-size:17px;">${formData.name}</span></div>
+          <div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Ship To</span><span style="color:#fff;font-weight:600;font-size:17px;text-align:right;max-width:320px;">${formData.address}</span></div>
+          <div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Build</span><span style="color:#fff;font-weight:600;font-size:17px;">${c.name} &middot; ${sName}</span></div>
+          <div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.05);"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Payment</span><span style="color:#fff;font-weight:600;font-size:17px;">Cash on Delivery</span></div>
+          <div style="display:flex;justify-content:space-between;padding:30px 0 20px;border-top:2px solid rgba(105,167,255,0.25);margin-top:16px;"><span style="color:#666;font-size:15px;text-transform:uppercase;letter-spacing:3px;">Total</span><span style="color:#69a7ff;font-weight:700;font-size:36px;">&#x20B9;${total.toLocaleString('en-IN')}</span></div>
         </div>
 
-        <div style="text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,0.06);margin-top:auto;">
-          <div style="color:#69a7ff;font-size:13px;letter-spacing:2px;font-weight:600;">Helpline: +91 1800-576-6680</div>
-          <div style="color:#555;font-size:10px;letter-spacing:1px;margin-top:6px;">support@kronos80.in &middot; Mon-Sat 9AM - 8PM IST</div>
-          <div style="color:#333;font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-top:14px;">Thank you for deploying KRONOS &middot; ${now.getFullYear()}</div>
+        <div style="text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,0.06);margin-top:auto;">
+          <div style="color:#69a7ff;font-size:16px;letter-spacing:3px;font-weight:600;">Helpline: +91 1800-576-6680</div>
+          <div style="color:#555;font-size:13px;letter-spacing:2px;margin-top:8px;">support@kronos80.in &middot; Mon-Sat 9AM - 8PM IST</div>
+          <div style="color:#333;font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-top:24px;">Thank you for deploying KRONOS &middot; ${now.getFullYear()}</div>
         </div>
       </div>`
     document.body.appendChild(container)
